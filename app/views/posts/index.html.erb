@@ -1,0 +1,74 @@
+<!-- <div class="wraper">
+  <p id="notice"><%= notice %></p>
+
+  <h1>Posts</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Content</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @posts.each do |post| %>
+        <tr>
+          <td><%= post.name %></td>
+          <td><%= post.content %></td>
+          <td><%= link_to 'Show', post %></td>
+          <td><%= link_to 'Edit', edit_post_path(post) %></td>
+          <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Post', new_post_path %>
+</div> -->
+
+<main>
+  <div class="wrapper">
+    <% @posts.each do |post| %>
+    <div class="datebox">
+      <span class="weekday"><%= post.created_at.strftime('%A') %></span>
+      <span class="date"><%= post.created_at.strftime('%B %e') %></span>
+    </div>
+    <div class="mainbox">
+      <div class="arrownumb"> <!-- arrow and number -->
+        <div class="arrow">
+              <%= button_to post_votes_path(post.id), class: "arrow" do %>
+           &#9650;<% end %>
+        </div>
+        <div class="number">
+          <p><%= post.votes.count %></p>
+        </div>
+      </div>
+      <div class="textbox">
+        <span class="texttitle">
+          <%= post.name %>
+        <%#  <p> Posted by: <%=@post.user.username %></p>
+        </span>
+        <span class="text">
+          <%= post.content %>
+          <%= link_to post do %>
+          <%= content_tag :span, "Read more..", :class => "Post link" %>
+          <% end %>
+        </span>
+      </div>
+      <div class="userpic">
+        <img src="img/tomeluce.gif" alt="Tome Luce pic">
+      </div>
+      <div class="comment">
+        <i class="fa fa-comment-o" aria-hidden="true"></i>
+      </div>
+      <div class="commentnumb">
+        <p><%= post.comments.count %></p>
+      </div>
+
+    </div>
+    <% end %>
+  </div>

@@ -1,0 +1,23 @@
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.postbutton {
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+  margin-bottom: 2em;
+  padding-right: 1em;
+
+  :hover{
+    background-color: gray;
+  }
+
+}
+
+.postwraper {
+  padding: 2em;
+}
+
+.postbutton {
+  padding-top: 2em;
+}

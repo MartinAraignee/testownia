@@ -1,0 +1,76 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.mainbox{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 6em;
+  padding-right: 7em;
+}
+
+.datebox{
+  text-align: center;
+  padding: 1em;
+}
+
+.weekday{
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.arrownumb{
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.number {
+  text-align: center;
+}
+
+.arrow{
+  border: 0;
+  background: none;
+  /*padding-left: 0.5em;*/
+  padding-top: 0.5em;
+  padding-bottom: -0.5em;
+}
+
+.button_to {
+  background-color: none;
+}
+
+.texttitle{
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: gray;
+}
+
+.textbox{
+  width: 76%;
+  max-height: 100px;
+}
+
+.text{
+  display: block;
+  color: lightgray;
+  padding-top: 0.5em;
+}
+
+.userpic img{
+  border-radius: 75%;
+  width: 2em;
+  height: 2em;
+  margin-left: 2em;
+}
+
+.comment{
+  padding-left: 3em;
+  padding-right: 1em;
+}
