@@ -12,9 +12,20 @@
 
   <body>
     <header>
+
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+
+
+
+
+
     <div class="topheader">
       <div class="logo">
-          <a href="index.html.erb">P</a>
+
+<%# how to do this link %>
+
+          <a href="/">P</a>
       </div>
       <div class="name">
           <h3>Product Hunt<h3/>
@@ -24,7 +35,8 @@
         <input type="search"  placeholder="Search for a product...">
       </div>
       <div class="login">
-        <button type="submit">Log in</button>
+        <a href="/users/sign_in"><button type="submit">Log in</button></a>
+
       </div>
       <div class="plus">
         <a href="index.html">+</a>
@@ -50,9 +62,9 @@
     </div>
 
   <header/>
-  <main>
+
     <%= yield %>
-  </main>
+
 
   </body>
 </html>
